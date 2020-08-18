@@ -15,6 +15,7 @@
 # Apache NiFi -  MiNiFi [![Build Status](https://travis-ci.org/apache/nifi-minifi.svg?branch=master)](https://travis-ci.org/apache/nifi-minifi)
 
 MiNiFi is a child project effort of Apache NiFi
+Note from ModdingFox: This fork just hacks in the ability to query processors and connections that are nested in processgroups. Keeping to mostly the same syntax normally used. ./minifi.sh flowStatus "processor:d549c0fa-b511-3a76-0000-000000000000:health,stats,bulletins" would become ./minifi.sh flowStatus "processor:d549c0fa-b511-3a76-0000-000000000000:health,stats,bulletins@435f5205-c249-35ca-0000-000000000000". As far as I can tell it works well so long as you know the uuid of the process groups that contains the processor/connection your interested in.
 
 ## Table of Contents
 
